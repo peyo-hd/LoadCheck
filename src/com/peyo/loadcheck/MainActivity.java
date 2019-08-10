@@ -67,7 +67,7 @@ public class MainActivity extends Activity {
     public void onCheckClicked(View v) {
         Log.i(TAG, "onCheckClicked()");
 
-        //checkHwProp();
+        checkHwProp();
 
         Log.i(TAG, "RxBytes : " + (TrafficStats.getTotalRxBytes() - totalRx));
         totalRx = TrafficStats.getTotalRxBytes();

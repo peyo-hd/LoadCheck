@@ -117,7 +117,7 @@ public class CheckService extends Service {
     long totalTx = 0;
 
     private void checkLoad() {
-        //checkHwProp();
+        checkHwProp();
 
         Log.i(TAG, "RxBytes : " + (TrafficStats.getTotalRxBytes() - totalRx));
         totalRx = TrafficStats.getTotalRxBytes();
