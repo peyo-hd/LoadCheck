@@ -4,10 +4,33 @@
     android:paddingLeft="50dp" android:paddingTop="50dp">
 
     <Button
-        android:id="@+id/check_button"
+        android:id="@+id/start_button"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:text="Start"
+        android:textSize="20dp"
+        android:onClick="onStartClicked" />
+
+    <Button
+        android:id="@+id/stop_button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/start_button"
+        android:layout_marginLeft="200dp"
+        android:text="Stop"
+        android:textSize="20dp"
+        android:onClick="onStopClicked" />
+
+
+    <Button
+        android:id="@+id/check_button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/start_button"
+        android:layout_marginTop="100dp"
         android:layout_alignParentLeft="true"
         android:text="Check"
         android:textSize="20dp"
@@ -17,11 +40,11 @@
         android:id="@+id/send_button"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_alignParentTop="true"
+        android:layout_below="@id/stop_button"
+        android:layout_marginTop="100dp"
         android:layout_toRightOf="@id/check_button"
         android:layout_marginLeft="200dp"
         android:text="Send"
         android:textSize="20dp"
         android:onClick="onSendClicked" />
-
 </RelativeLayout>

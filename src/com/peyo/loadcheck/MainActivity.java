@@ -109,4 +109,12 @@ public class MainActivity extends Activity {
             }
         }.execute();
     }
+
+    public void onStartClicked(View v) {
+        startForegroundService(new Intent(this, CheckService.class));
+    }
+
+    public void onStopClicked(View v) {
+        stopService(new Intent(this, CheckService.class));
+    }
 }
