@@ -47,4 +47,28 @@
         android:text="Send"
         android:textSize="20dp"
         android:onClick="onSendClicked" />
+
+
+    <Button
+        android:id="@+id/reboot_button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/check_button"
+        android:layout_marginTop="100dp"
+        android:layout_alignParentLeft="true"
+        android:text="Reboot"
+        android:textSize="20dp"
+        android:onClick="onRebootClicked" />
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/send_button"
+        android:layout_marginTop="100dp"
+        android:layout_toRightOf="@id/reboot_button"
+        android:layout_marginLeft="200dp"
+        android:text="Reset"
+        android:textSize="20dp"
+        android:onClick="onResetClicked" />
 </RelativeLayout>

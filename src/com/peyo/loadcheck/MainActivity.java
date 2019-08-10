@@ -9,6 +9,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.CpuUsageInfo;
 import android.os.HardwarePropertiesManager;
+import android.os.PowerManager;
+import android.os.RecoverySystem;
 import android.util.Log;
 import android.view.View;
 
@@ -102,6 +104,25 @@ public class MainActivity extends Activity {
                     }
 
                     conn.disconnect();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+        }.execute();
+    }
+
+    public void onRebootClicked(View v) {
+        PowerManager pm = (PowerManager)getSystemService(POWER_SERVICE);
+        pm.reboot(null);
+    }
+
+    public void onResetClicked(View v) {
+        new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... voids) {
+                try {
+                    RecoverySystem.rebootWipeUserData(getApplicationContext());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
