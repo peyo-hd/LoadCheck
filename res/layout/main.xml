@@ -13,4 +13,15 @@
         android:textSize="20dp"
         android:onClick="onCheckClicked" />
 
+    <Button
+        android:id="@+id/send_button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/check_button"
+        android:layout_marginLeft="200dp"
+        android:text="Send"
+        android:textSize="20dp"
+        android:onClick="onSendClicked" />
+
 </RelativeLayout>
